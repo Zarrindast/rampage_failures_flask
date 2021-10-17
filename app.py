@@ -120,7 +120,7 @@ def create_record():
         new_attack_location = request.args["location"]
         new_attack_person = request.args["person"]
         new_attack_description = request.args["description"]
-        if not new_attack_person in #[AttemptClass.person.query.all()? no .query?]:
+        # if not new_attack_person in AttemptClass.person.query.all()
         new_attack = AttemptClass(date=new_attack_date,location=new_attack_location,person=new_attack_person,description=new_attack_description)
         db.session.add(new_attack)
         db.session.commit()
