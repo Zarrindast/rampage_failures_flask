@@ -114,8 +114,8 @@ def instruct_user():
     return "format your entry like such and such." # or could do a var that's HTML in triple quotes
 def create_record():
         table = AttemptClass.query.all()
-        people = AttemptClass.person.query.all() # not sure if valid
-        added = {}
+        #people = AttemptClass.person.query.all() # not sure if valid
+        #added = {}
         new_attack_date = request.args["date"]
         new_attack_location = request.args["location"]
         new_attack_person = request.args["person"]
@@ -125,7 +125,7 @@ def create_record():
         db.session.add(new_attack)
         db.session.commit()
 
-return jsonify({"added": added, "current": table})
+return jsonify({"added": new_attack, "current": table})
 # returning a minidict that shows you the new entry as a value under the label "added"
 # and the total so far post-POST under the label "current"
         
