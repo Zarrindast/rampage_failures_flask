@@ -15,7 +15,8 @@ def main():
             date=attempts_table_row[0],
             location=attempts_table_row[1],
             person=None,
-            description=attempts_table_row[2]
+            # changed from attempts_table_row[2] which is currently null...
+            description=attempts_table_row[3]
             )
         print(db_row_attempts)
 
