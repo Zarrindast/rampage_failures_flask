@@ -125,11 +125,11 @@ def create_record():
         db.session.add(new_attack)
         db.session.commit()
 
-return jsonify({"added": new_attack, "current": table})
-# returning a minidict that shows you the new entry as a value under the label "added"
-# and the total so far post-POST under the label "current"
-        
-# ideally, search by person, year, or state (will have to separate out city and state)
+        return jsonify({"added": new_attack, "current": table})
+        # returning a minidict that shows you the new entry as a value under the label "added"
+        # and the total so far post-POST under the label "current"
+
+        # ideally, search by person, year, or state (will have to separate out city and state)
 
         
 # # change this to allow the deletion of data
